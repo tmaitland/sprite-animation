@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cat Run</title>
+    <style>
+        body{
+            margin: 0;
+            background: url('jungleBG.jpeg') 0 0 repeat-x;
+            background-size: 1600px 100%;
+            height: 100vh;
+            width: 100vh;
+            animation: jungle 10s linear infinite;
+
+        }
+        .panther{
+            position: fixed;
+            top: 250px;
+            right: 500px;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            background: url('runningcat.png') 0 0 no-repeat;
+            width: 512px;
+            height: 256px;
+            animation: run 500ms steps(4) infinite;
+        }
+
+        .rabbit{
+            position: fixed;
+            top: 450px;
+            right: 0;
+            bottom: 0px;
+            left: 850px;
+            background: url('bunnysprite.png') 0 0 no-repeat;
+            width: 142.555556px;
+            height: 128px;
+            animation: bunrun 500ms steps(8) infinite;
+            
+        }
+
+        @keyframes run {
+            from{
+                background-position: 0 0;
+            }
+            to{
+                background-position: 0 -1024px;
+            }
+        }
+
+        @keyframes bunrun {
+            from{
+                background-position: -1015px 0;
+            }
+            to {
+                background-position: 0 0;
+            }
+        }
+
+        @keyframes jungle {
+            from{
+                background-position: 0 0;
+            }
+            to{
+                background-position: -1600px 0 ;
+            }
+        }
+
+        /* .box{
+            transition: height 700ms 1000ms;
+        }
+     */
+    </style>
+</head>
+<body>
+
+    <div class="panther"></div>
+    <div class="rabbit"></div>
+    
+    
+</body>
+</html>
